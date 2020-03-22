@@ -12,39 +12,42 @@ public class Main {
         me.pet = new Animal("mouse");
         me.pet.name = "Myszojeleń";
 
-
+        Car bmw = new Car("BMW", "E56", 2019, 2.2);
+        bmw.setPrice(25000);
 
         System.out.println(Math.PI);
 
 
 
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.feed();
+//        me.pet.feed();
+//        me.pet.feed();
+//        me.pet.feed();
+//
+//        me.pet.takeOnWalk();
+//        me.pet.takeOnWalk();
+//        me.pet.takeOnWalk();
+//        me.pet.takeOnWalk();
 
-        me.pet.takeOnWalk();
-        me.pet.takeOnWalk();
-        me.pet.takeOnWalk();
-        me.pet.takeOnWalk();
+        System.out.println("my salary is: " + me.getSalary());
 
-//        Animal dog = new Animal("dog");
-//        dog.name = "Ruk";
+        me.setSalary(3000.0);
+        me.setCar(bmw);
+        System.out.println("I'm driving " + me.getCar().model);
 
-//        me.pet = dog;
+//        Car passat = new Car("Passat", "Passat", 2005, 1.4);
+//        passat.setPrice(4000);
 
-//        dog.feed();
-//        dog.feed();
+        Human you = new Human();
+        you.firstName = "Anna";
+        you.lastName = "Likusz";
+        you.setSalary(3000.0);
+        you.setCar(bmw);
 
+        System.out.println(me.getCar());
+        System.out.println(you.getCar());
 
+        //me.setCar(passat);
 
-//        System.out.println(Animal.DEFAULT_WEIGHT);
-//        System.out.println(dog.name);
-//        System.out.println(me.pet.name);
-
-
-//        System.out.println(dog.weight);
-//        dog.feed();
-//        System.out.println(dog.weight);
 
 
     }
