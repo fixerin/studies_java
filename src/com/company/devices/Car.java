@@ -1,11 +1,11 @@
-package com.company;
+package com.company.devices;
 
 public class Car {
-    String carMake;
-    String model;
-    Integer productionYear;
+    public String carMake;
+    public String model;
+    public Integer productionYear;
     //Integer displacement;
-    Double engineCapacity;
+    public Double engineCapacity;
     private Integer price;
 
     public Car(String carMake, String model, Integer productionYear, Double engineCapacity) {
@@ -25,5 +25,9 @@ public class Car {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public String toString(){
+        return carMake + " " + model + " " + productionYear;
     }
 }

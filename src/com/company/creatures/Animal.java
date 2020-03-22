@@ -1,12 +1,12 @@
-package com.company;
+package com.company.creatures;
 
 import java.io.File;
 
 public class Animal {
-    final String species;
+    public final String species;
     private Double weight;
     public String name;
-    File pic;
+    public File pic;
 
     public static final Double DEFAULT_DOG_WEIGHT = 10.0;
     public static final Double DEFAULT_MOUSE_WEIGHT = 0.12;
@@ -15,17 +15,17 @@ public class Animal {
 
     public Animal(String species) {
         this.species = species;
-        if (species == "dog") {
+        if (species.equals("dog")) {
             this.weight = DEFAULT_DOG_WEIGHT;
-        } else if (species == "mouse") {
+        } else if (species.equals("mouse")) {
             this.weight = DEFAULT_MOUSE_WEIGHT;
-        } else if (species == "lion") {
+        } else if (species.equals("lion")) {
             this.weight = DEFAULT_LION_WEIGHT;
         }
     }
 
 
-    void feed(){
+    public void feed(){
         if (alive()) {
             weight++;
             System.out.println("Thx for food bro, my weight is now: " + weight);
@@ -34,7 +34,7 @@ public class Animal {
         }
     }
 
-    void takeOnWalk(){
+    public void takeOnWalk(){
         if (weight >= 3) {
             weight--;
             System.out.println("Thx for a walk bro, my weight is now: " + weight);
@@ -45,7 +45,7 @@ public class Animal {
             System.out.println("You can't walk with dead animal.");
         }
     }
-    boolean alive(){
+    public boolean alive(){
         if (weight > 0) {
             return true;
         } else {

@@ -1,11 +1,14 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Human {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     private Car car;
-    Phone phone;
-    Animal pet;
+    public Phone phone;
+    public Animal pet;
     private Double salary = 1000.0;
 
     public Double getSalary() {
@@ -34,5 +37,9 @@ public class Human {
     public Car getCar() {
         //System.out.println("Your car: " + car.carMake);
         return car;
+    }
+
+    public String toString() {
+        return firstName + " " + lastName;
     }
 }
