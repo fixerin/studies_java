@@ -1,8 +1,14 @@
 package com.company.devices;
 
-public class Phone {
-    String producer;
-    String model;
+public class Phone extends Device{
+//    String producer;
+//    String model;
     Double screenSize;
     String system;
+
+    public Phone(String model, String weight, String producer, Integer productionYear, Integer price, Double screenSize, String system) {
+        super(model, weight, producer, productionYear, price);
+        this.screenSize = screenSize;
+        this.system = system;
+    }
 }

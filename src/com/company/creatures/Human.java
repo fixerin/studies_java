@@ -11,8 +11,11 @@ public class Human extends Animal{
     public Animal pet;
     private Double salary = 1000.0;
 
+    public final static double DEFAULT_HUMAN_WEIGHT = 70.0;
+
     public Human() {
         super("homo sapiens");
+        this.weight = DEFAULT_HUMAN_WEIGHT;
     }
 
     public Double getSalary() {

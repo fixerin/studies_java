@@ -5,6 +5,7 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -52,6 +53,18 @@ public class Main {
         System.out.println(me);
 
         System.out.println(me.species);
+        me.feed();
+
+        System.out.println(me instanceof Human);
+        System.out.println(me instanceof Animal);
+
+        System.out.println(me.pet instanceof Human);
+        System.out.println(me.pet instanceof Animal);
+
+        System.out.println(me instanceof Object);
+        System.out.println(me.pet instanceof Object);
+        System.out.println(me.getCar() instanceof Object);
+
 
         //me.setCar(passat);
 
