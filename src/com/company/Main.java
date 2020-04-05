@@ -51,6 +51,8 @@ public class Main {
         System.out.println(you.getCar());
         System.out.println(me);
 
+        System.out.println(me.species);
+
         //me.setCar(passat);
 
 
