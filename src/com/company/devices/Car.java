@@ -26,6 +26,9 @@ public class Car extends Device{
         this.engineCapacity = engineCapacity;
     }
 
+    public void turnOn(){
+        System.out.println("Engine is on");
+    }
     public String toString(){
         return carMake + " " + model + " " + productionYear;
     }

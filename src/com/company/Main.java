@@ -9,7 +9,7 @@ import com.company.devices.Phone;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 	// write your code here
         Human me = new Human();
         me.firstName = "Leszek";
@@ -68,6 +68,9 @@ public class Main {
 
         //me.setCar(passat);
 
+        me.sell();
+        me.getCar().sell();
+        me.pet.sell();
 
 
     }

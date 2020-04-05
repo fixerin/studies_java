@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Device {
+import com.company.Saleable;
+//import com.company.creatures.Human;
+
+public abstract class Device implements Saleable {
     public String model;
     protected String weight;
     public String producer;
@@ -22,5 +25,16 @@ public class Device {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+    public String toString(){
+        return producer + ", " + model + ", " + weight;
+    }
+
+    abstract void turnOn();
+
+    public void sell(){
+            System.out.println("Item has been sold.");
+    }
+
 
 }

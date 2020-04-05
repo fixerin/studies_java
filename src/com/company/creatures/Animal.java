@@ -1,8 +1,10 @@
 package com.company.creatures;
 
+import com.company.Saleable;
+
 import java.io.File;
 
-public class Animal {
+public class Animal implements Edible, Saleable {
     public final String species;
     protected Double weight;
     public String name;
@@ -54,6 +56,24 @@ public class Animal {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public void beEaten(){
+        if (this instanceof Human){
+//            throw new Exception("no way you cannibal");
+            System.out.println("no way you cannibal");
+        } else {
+            System.out.println("adioos");
+            this.weight = 0.0;
+        }
+    }
+
+    public void sell(){
+        if (this instanceof Human){
+            System.out.println("Slavery restricted.");
+        } else{
+            System.out.println("Pet has been sold.");
         }
     }
 }
