@@ -17,7 +17,7 @@ public class Main {
         me.pet = new Animal("mouse");
         me.pet.name = "Myszojeleń";
 
-        Car bmw = new Car("BMW", "E56", 2019, 2.2);
+        Car bmw = new Car("BMW", "E56", "xzc", 2019, 20000, "BMW", 2000.0);
         bmw.setPrice(25000);
 
         System.out.println(Math.PI);

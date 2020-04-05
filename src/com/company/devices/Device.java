@@ -3,9 +3,9 @@ package com.company.devices;
 public class Device {
     public String model;
     protected String weight;
-    String producer;
+    public String producer;
     public Integer productionYear;
-    private Integer price;
+    public Integer price;
 
     public Device(String model, String weight, String producer, Integer productionYear, Integer price) {
         this.model = model;
