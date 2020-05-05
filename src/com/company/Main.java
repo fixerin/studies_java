@@ -35,8 +35,11 @@ public class Main {
 //        me.pet.takeOnWalk();
 
         System.out.println("my salary is: " + me.getSalary());
-
         me.setSalary(3000.0);
+        System.out.println("my salary is: " + me.getSalary());
+        me.setSalary(-100.0);
+        System.out.println("my salary is : " + me.getSalary());
+
         me.setCar(bmw);
         System.out.println("I'm driving " + me.getCar().model);
 

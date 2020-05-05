@@ -32,7 +32,7 @@ public class Human extends Animal {
             System.out.println("Musisz odebrać aneks do umowy od pani Hani z kadr w ciągu 14 dni.");
             System.out.println("ZUS i US już znają wartość twojej wypłaty. Nie ma sensu jej ukrywać");
             this.salary = salary;
-            System.out.println("Twoja nowa wypłata to:" + salary);
+            System.out.println("Twoja nowa wypłata to: " + salary);
         }
 
     }
