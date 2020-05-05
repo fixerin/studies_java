@@ -15,4 +15,7 @@ public class Phone extends Device {
     void turnOn() {
         System.out.println("Hello kitty");
     }
+    public String toString() {
+        return screenSize + " " + model + " " + system;
+    }
 }

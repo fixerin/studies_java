@@ -45,7 +45,7 @@ public class Human extends Animal {
             System.out.println("Udało Ci się kupić auto na 12 rat.");
             this.car = car;
         } else {
-            System.out.println("Nie stać Cię na to auto, wybierz inne.");
+            System.out.println("zapisz się na studia i znajdź nową robotę albo idź po podwyżkę.");
 
         }
 

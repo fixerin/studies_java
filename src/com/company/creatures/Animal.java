@@ -90,4 +90,8 @@ public abstract class Animal implements Edible, Saleable {
             }
         }
     }
+
+    public String toString() {
+        return species + " " + name;
+    }
 }

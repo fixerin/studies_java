@@ -21,7 +21,7 @@ public class Main {
 
         Car bmw = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
         bmw.setPrice(25000);
-
+        Car bmw2 = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
         System.out.println(Math.PI);
 
 
@@ -53,9 +53,17 @@ public class Main {
         you.setCar(bmw);
         you.cash = 1000.0;
 
+        // its the same car - same object.
         System.out.println(me.getCar());
         System.out.println(you.getCar());
+
+        //these're 2 different objects but with same fields and values
+        System.out.println(bmw);
+        System.out.println(bmw2);
+
         System.out.println(me);
+
+        System.out.println(me.phone);
 
         System.out.println(me.species);
         me.feed();
