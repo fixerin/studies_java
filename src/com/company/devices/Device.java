@@ -1,16 +1,17 @@
 package com.company.devices;
 
 import com.company.Saleable;
+import com.company.creatures.Human;
 //import com.company.creatures.Human;
 
 public abstract class Device implements Saleable {
     public String model;
-    protected String weight;
+    protected double weight;
     public String producer;
     public Integer productionYear;
     public Integer price;
 
-    public Device(String model, String weight, String producer, Integer productionYear, Integer price) {
+    public Device(String model, double weight, String producer, Integer productionYear, Integer price) {
         this.model = model;
         this.weight = weight;
         this.producer = producer;
@@ -26,14 +27,19 @@ public abstract class Device implements Saleable {
         this.price = price;
     }
 
-    public String toString(){
+    public String toString() {
         return producer + ", " + model + ", " + weight;
     }
 
     abstract void turnOn();
 
-    public void sell(){
-            System.out.println("Item has been sold.");
+    @Override
+    public void sellable(Human buyer, Human seller, Double price) {
+        if (buyer.cash >= price) {
+            System.out.println(seller.firstName + " sold item to " + buyer.firstName);
+        } else {
+            System.out.println(buyer.firstName + " has not enought cash.");
+        }
     }
 
 

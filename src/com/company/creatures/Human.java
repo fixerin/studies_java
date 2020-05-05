@@ -3,13 +3,14 @@ package com.company.creatures;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
-public class Human extends Animal{
+public class Human extends Animal {
     public String firstName;
     public String lastName;
     private Car car;
     public Phone phone;
     public Animal pet;
     private Double salary = 1000.0;
+    public Double cash;
 
     public final static double DEFAULT_HUMAN_WEIGHT = 70.0;
 

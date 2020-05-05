@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Car extends Device{
+public class Car extends Device {
     public String carMake;
     //public String model;
 //    public Integer productionYear;
@@ -20,16 +20,17 @@ public class Car extends Device{
 //    }
 
 
-    public Car(String model, String weight, String producer, Integer productionYear, Integer price, String carMake, Double engineCapacity) {
+    public Car(String model, Double weight, String producer, Integer productionYear, Integer price, String carMake, Double engineCapacity) {
         super(model, weight, producer, productionYear, price);
         this.carMake = carMake;
         this.engineCapacity = engineCapacity;
     }
 
-    public void turnOn(){
+    public void turnOn() {
         System.out.println("Engine is on");
     }
-    public String toString(){
+
+    public String toString() {
         return carMake + " " + model + " " + productionYear;
     }
 }

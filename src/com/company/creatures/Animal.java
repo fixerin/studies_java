@@ -4,7 +4,7 @@ import com.company.Saleable;
 
 import java.io.File;
 
-public class Animal implements Edible, Saleable {
+public abstract class Animal implements Edible, Saleable {
     public final String species;
     protected Double weight;
     public String name;
@@ -31,27 +31,28 @@ public class Animal implements Edible, Saleable {
     }
 
 
-    public void feed(){
+    public void feed() {
         if (alive()) {
             weight++;
             System.out.println("Thx for food bro, my weight is now: " + weight);
-        } else if (!alive()){
+        } else if (!alive()) {
             System.out.println("You can't feed dead animal.");
         }
     }
 
-    public void takeOnWalk(){
+    public void takeOnWalk() {
         if (weight >= 3) {
             weight--;
             System.out.println("Thx for a walk bro, my weight is now: " + weight);
-        } else if (alive()){
+        } else if (alive()) {
             weight--;
             System.out.println("Thx for a walk bro, but I'm hungry.");
         } else {
             System.out.println("You can't walk with dead animal.");
         }
     }
-    private boolean alive(){
+
+    private boolean alive() {
         if (weight > 0) {
             return true;
         } else {
@@ -59,8 +60,8 @@ public class Animal implements Edible, Saleable {
         }
     }
 
-    public void beEaten(){
-        if (this instanceof Human){
+    public void beEaten() {
+        if (this instanceof Human) {
 //            throw new Exception("no way you cannibal");
             System.out.println("no way you cannibal");
         } else {
@@ -69,11 +70,24 @@ public class Animal implements Edible, Saleable {
         }
     }
 
-    public void sell(){
-        if (this instanceof Human){
+//    public void sellable() {
+//        if (this instanceof Human) {
+//            System.out.println("Slavery restricted.");
+//        } else {
+//            System.out.println("Pet has been sold.");
+//        }
+//    }
+
+    @Override
+    public void sellable(Human buyer, Human seller, Double price) {
+        if (this instanceof Human) {
             System.out.println("Slavery restricted.");
-        } else{
-            System.out.println("Pet has been sold.");
+        } else {
+            if (buyer.cash >= price) {
+                System.out.println(seller.firstName + " sold item to" + buyer.firstName);
+            } else {
+                System.out.println(buyer.firstName + " has not enought cash.");
+            }
         }
     }
 }

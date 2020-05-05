@@ -10,18 +10,19 @@ import com.company.devices.Phone;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-	// write your code here
+        // write your code here
         Human me = new Human();
         me.firstName = "Leszek";
         me.lastName = "Leszner";
-        me.pet = new Animal("mouse");
-        me.pet.name = "Myszojeleń";
+//        me.pet = new Animal("mouse");
+//        me.pet.name = "Myszojeleń";
+        me.cash = 10000.0;
+        me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
 
-        Car bmw = new Car("BMW", "E56", "xzc", 2019, 20000, "BMW", 2000.0);
+        Car bmw = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
         bmw.setPrice(25000);
 
         System.out.println(Math.PI);
-
 
 
 //        me.pet.feed();
@@ -47,6 +48,7 @@ public class Main {
         you.lastName = "Likusz";
         you.setSalary(3000.0);
         you.setCar(bmw);
+        you.cash = 1000.0;
 
         System.out.println(me.getCar());
         System.out.println(you.getCar());
@@ -68,10 +70,11 @@ public class Main {
 
         //me.setCar(passat);
 
-        me.sell();
-        me.getCar().sell();
-        me.pet.sell();
-
+//        me.sell();
+//        me.getCar().sell();
+//        me.pet.sell();
+        me.phone.sellable(you, me, 900.0);
+        me.getCar().sellable(me, you, 200000.0);
 
     }
 }
