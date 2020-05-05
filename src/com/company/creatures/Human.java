@@ -24,8 +24,17 @@ public class Human extends Animal {
     }
 
     public void setSalary(Double salary) {
-        System.out.println("Your salary is now:" + salary);
-        this.salary = salary;
+
+        if (salary < 0) {
+            System.out.println("Wypłata to nie długi, nie może być ujemna.");
+        } else {
+            System.out.println("Nowe dane zostały wysłane do systemu księgowego.");
+            System.out.println("Musisz odebrać aneks do umowy od pani Hani z kadr w ciągu 14 dni.");
+            System.out.println("ZUS i US już znają wartość twojej wypłaty. Nie ma sensu jej ukrywać");
+            this.salary = salary;
+            System.out.println("Twoja nowa wypłata to:" + salary);
+        }
+
     }
 
     public void setCar(Car car) {
