@@ -79,16 +79,23 @@ public abstract class Animal implements Edible, Saleable {
 //    }
 
     @Override
-    public void sellable(Human buyer, Human seller, Double price) {
+    public void sellable(Human buyer, Human seller, Double price){
         if (this instanceof Human) {
             System.out.println("Slavery restricted.");
         } else {
             if (buyer.cash >= price) {
                 System.out.println(seller.firstName + " sold item to " + buyer.firstName);
+                buyer.cash = buyer.cash - price;
+                seller.cash = seller.cash + price;
+                buyer.pet = this;
+                if (seller.pet == this) {
+                    seller.pet = null;
+                }
             } else {
                 System.out.println(buyer.firstName + " has not enought cash.");
             }
         }
+
     }
 
     public String toString() {

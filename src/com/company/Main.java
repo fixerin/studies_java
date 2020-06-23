@@ -94,6 +94,9 @@ public class Main {
 //        me.pet.sell();
         System.out.println("Anna's cash: " + you.cash);
         System.out.println("Leszek's cash: " + me.cash);
+
+        //phone
+
         try {
             me.phone.sellable(you, me, 900.0);
         } catch (NullPointerException ex) {
