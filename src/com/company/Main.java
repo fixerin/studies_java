@@ -19,7 +19,7 @@ public class Main {
 //        me.pet = new Animal("mouse");
 //        me.pet.name = "Myszojeleń";
         me.cash = 10000.0;
-        me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
+        //me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
 
         Car bmw = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
         bmw.setPrice(25000);
@@ -84,16 +84,38 @@ public class Main {
         System.out.println(bmw.toString());
         bmw.turnOn();
         me.getCar().turnOn();
-        System.out.println(me.phone.toString());
-        me.phone.turnOn();
+        //System.out.println(me.phone.toString());
+        //me.phone.turnOn();
 
         //me.setCar(passat);
 
 //        me.sell();
-//        me.getCar().sell();
+//       me.getCar().sell();
 //        me.pet.sell();
-//        me.phone.sellable(you, me, 900.0);
-//        me.getCar().sellable(me, you, 200000.0);
+        System.out.println("Anna's cash: " + you.cash);
+        System.out.println("Leszek's cash: " + me.cash);
+        try {
+            me.phone.sellable(you, me, 900.0);
+        } catch (NullPointerException ex) {
+            System.out.println("Seller don't even have the item which wants to sell.");
+        }
+
+        me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
+        try {
+            me.phone.sellable(you, me, 900.0);
+        } catch (NullPointerException ex) {
+            System.out.println("Seller don't even have the item which wants to sell.");
+        }
+
+        System.out.println("Anna's cash: " + you.cash);
+        System.out.println("Leszek's cash: " + me.cash);
+        try {
+            me.getCar().sellable(me, you, 20000.0);
+        } catch (NullPointerException ex) {
+            System.out.println("Seller don't even have the item which wants to sell.");
+        }
+        me.sellable(you, me, 10000.0);
+        //me.sellable(you, me, 300.0, );
 
 
         Scanner in = new Scanner(System.in);

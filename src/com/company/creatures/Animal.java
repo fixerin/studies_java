@@ -84,7 +84,7 @@ public abstract class Animal implements Edible, Saleable {
             System.out.println("Slavery restricted.");
         } else {
             if (buyer.cash >= price) {
-                System.out.println(seller.firstName + " sold item to" + buyer.firstName);
+                System.out.println(seller.firstName + " sold item to " + buyer.firstName);
             } else {
                 System.out.println(buyer.firstName + " has not enought cash.");
             }

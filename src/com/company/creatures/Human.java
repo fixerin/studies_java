@@ -10,6 +10,7 @@ public class Human extends Animal {
     public Phone phone;
     public Animal pet;
     private Double salary = 1000.0;
+
     public Double cash;
 
     public final static double DEFAULT_HUMAN_WEIGHT = 70.0;

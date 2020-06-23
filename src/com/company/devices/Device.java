@@ -36,12 +36,31 @@ public abstract class Device implements Saleable {
 
     @Override
     public void sellable(Human buyer, Human seller, Double price) {
+
         if (buyer.cash >= price) {
             System.out.println(seller.firstName + " sold item to " + buyer.firstName);
+            buyer.cash = buyer.cash - price;
+            seller.cash = seller.cash + price;
         } else {
             System.out.println(buyer.firstName + " has not enought cash.");
         }
     }
+
+//        try {
+//            if (item != null) {
+//                if (buyer.cash >= price) {
+//                    System.out.println(seller.firstName + " sold item to " + buyer.firstName);
+//                    buyer.cash = buyer.cash - price;
+//                    seller.cash = seller.cash + price;
+//                } else {
+//                    System.out.println(buyer.firstName + " has not enought cash.");
+//                }
+//            }
+//        } catch (NullPointerException ex) {
+//            System.out.println("Seller don't even have the item which wants to sell.");
+//        }
+
+//    }
 
 
 }
