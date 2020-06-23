@@ -4,6 +4,7 @@ import com.company.Saleable;
 import com.company.creatures.Human;
 //import com.company.creatures.Human;
 
+
 public abstract class Device implements Saleable {
     public String model;
     protected double weight;

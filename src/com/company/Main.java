@@ -7,6 +7,8 @@ import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -54,38 +56,46 @@ public class Main {
         you.cash = 1000.0;
 
         // its the same car - same object.
-        System.out.println(me.getCar());
-        System.out.println(you.getCar());
-
-        //these're 2 different objects but with same fields and values
-        System.out.println(bmw);
-        System.out.println(bmw2);
-
-        System.out.println(me);
-
-        System.out.println(me.phone);
-
-        System.out.println(me.species);
+//        System.out.println(me.getCar());
+//        System.out.println(you.getCar());
+//
+//        //these're 2 different objects but with same fields and values
+//        System.out.println(bmw);
+//        System.out.println(bmw2);
+//
+//        System.out.println(me);
+//
+//        System.out.println(me.phone);
+//
+//        System.out.println(me.species);
         me.feed();
 
-        System.out.println(me instanceof Human);
-        System.out.println(me instanceof Animal);
+//        System.out.println(me instanceof Human);
+//        System.out.println(me instanceof Animal);
+//
+//        System.out.println(me.pet instanceof Human);
+//        System.out.println(me.pet instanceof Animal);
+//
+//        System.out.println(me instanceof Object);
+//        System.out.println(me.pet instanceof Object);
+//        System.out.println(me.getCar() instanceof Object);
 
-        System.out.println(me.pet instanceof Human);
-        System.out.println(me.pet instanceof Animal);
 
-        System.out.println(me instanceof Object);
-        System.out.println(me.pet instanceof Object);
-        System.out.println(me.getCar() instanceof Object);
-
+        System.out.println(bmw.toString());
+        bmw.turnOn();
+        me.getCar().turnOn();
+        System.out.println(me.phone.toString());
+        me.phone.turnOn();
 
         //me.setCar(passat);
 
 //        me.sell();
 //        me.getCar().sell();
 //        me.pet.sell();
-        me.phone.sellable(you, me, 900.0);
-        me.getCar().sellable(me, you, 200000.0);
+//        me.phone.sellable(you, me, 900.0);
+//        me.getCar().sellable(me, you, 200000.0);
 
+
+        Scanner in = new Scanner(System.in);
     }
 }

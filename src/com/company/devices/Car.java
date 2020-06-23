@@ -1,5 +1,6 @@
 package com.company.devices;
 
+
 public class Car extends Device {
     public String carMake;
     //public String model;
