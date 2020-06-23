@@ -4,6 +4,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -16,8 +17,8 @@ public class Main {
         Human me = new Human();
         me.firstName = "Leszek";
         me.lastName = "Leszner";
-//        me.pet = new Animal("mouse");
-//        me.pet.name = "Myszojeleń";
+        me.pet = new Pet("mouse");
+        me.pet.name = "Rulo";
         me.cash = 10000.0;
         //me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
 
@@ -119,6 +120,12 @@ public class Main {
         }
         me.sellable(you, me, 10000.0);
         //me.sellable(you, me, 300.0, );
+
+
+
+        me.pet.feed();
+        me.pet.feed();
+        me.pet.feed();
 
 
         Scanner in = new Scanner(System.in);

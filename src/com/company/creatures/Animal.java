@@ -4,6 +4,7 @@ import com.company.Saleable;
 
 import java.io.File;
 
+
 public abstract class Animal implements Edible, Saleable {
     public final String species;
     protected Double weight;
@@ -30,12 +31,15 @@ public abstract class Animal implements Edible, Saleable {
         }
     }
 
-
     public void feed() {
+        feed(2.1);
+    }
+
+    public void feed(Double foodWeight) {
         if (alive()) {
-            weight++;
+            weight += foodWeight;
             System.out.println("Thx for food bro, my weight is now: " + weight);
-        } else if (!alive()) {
+        } else {
             System.out.println("You can't feed dead animal.");
         }
     }
