@@ -1,7 +1,7 @@
 package com.company.devices;
 
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public String carMake;
     //public String model;
 //    public Integer productionYear;
@@ -34,4 +34,6 @@ public class Car extends Device {
     public String toString() {
         return carMake + " " + model + " " + productionYear;
     }
+
+    public abstract void refuel(Integer actualState);
 }

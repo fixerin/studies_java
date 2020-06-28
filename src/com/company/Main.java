@@ -6,6 +6,7 @@ import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.Disel;
 import com.company.devices.Phone;
 
 import java.util.Scanner;
@@ -22,10 +23,14 @@ public class Main {
         me.cash = 10000.0;
         //me.phone = new Phone( "Galaxy 7", 0.06, "Samsung", 2010, 900, 14.5, "Android 5");
 
-        Car bmw = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
+        //Car bmw = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
+
+        Disel bmw = new Disel("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0, 200);
+
+
         bmw.setPrice(25000);
-        Car bmw2 = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
-        System.out.println(Math.PI);
+        //Car bmw2 = new Car("E56", 700.0, "BMW", 2019, 20000, "BMW", 2000.0);
+        //System.out.println(Math.PI);
 
 
 //        me.pet.feed();
@@ -97,7 +102,7 @@ public class Main {
         System.out.println("Leszek's cash: " + me.cash);
 
         //phone
-
+/*
         try {
             me.phone.sellable(you, me, 900.0);
         } catch (NullPointerException ex) {
@@ -120,12 +125,20 @@ public class Main {
         }
         me.sellable(you, me, 10000.0);
         //me.sellable(you, me, 300.0, );
+*/
+        me.phone = new Phone( "Mi 9", 0.3,  "Xiaomi", 2019, 1500, 14.4, "Android 10");
+
+        String[] apps = {"Muber Eatz", "Allogro"};
+        me.phone.installAnApp( apps );
+
+        me.phone.installAnApp( "Spotimy", "v10.3" );
 
 
+        //me.pet.feed();
+        //me.pet.feed();
+        //me.pet.feed();
 
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.feed();
+        me.getCar().refuel( 40);
 
 
         Scanner in = new Scanner(System.in);
